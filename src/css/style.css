@@ -1,0 +1,146 @@
+:root {
+    --error-message: red;
+
+    --button-main-color: dodgerblue;
+    --button-secondary-color: lemonchiffon;
+
+    --button-delete-main-color: #ff7f7f;
+    --button-delete-secondary-color: dodgerblue;
+
+    --button-manager-main-color: #fffcbb;
+    --button-manager-secondary-color: dodgerblue;
+
+    --button-apply-main-color: #fed8b1;
+    --button-apply-secondary-color: dodgerblue;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 70rem;
+    height: 100vh;
+
+    background-color: #F8FBFF;
+    color: #333333;
+
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    margin: 0.5rem;
+    border: 0.2rem solid dodgerblue;
+}
+
+table > tr:nth-child(2n-1) {
+    background-color: lightblue;
+}
+
+table > caption {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.error-message {
+    color: var(--error-message);
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+.input-text {
+    width: 100%;
+}
+
+.input-button {
+    border: 0.3rem solid var(--button-main-color);
+    border-radius: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+
+    background-color: var(--button-main-color);
+    color: var(--button-secondary-color);
+
+    font-size: 1.75rem;
+    letter-spacing: 0.05rem;
+}
+
+.input-button:focus {
+    outline: none;
+}
+
+.input-button:hover {
+    cursor: pointer;
+    background-color: var(--button-secondary-color);
+    color: var(--button-main-color);
+    transition: 0.5s;
+}
+
+.input-button[data-action="delete"],
+.delete-confirm {
+    background-color: var(--button-delete-main-color);
+    color: var(--button-delete-secondary-color);
+}
+
+.input-button[data-action="delete"]:hover,
+.delete-confirm:hover {
+    background-color: var(--button-delete-secondary-color);
+    color: var(--button-delete-main-color);
+}
+
+.input-button[value="Sell"],
+.input-button[value="Buy"] {
+    background-color: var(--button-manager-main-color);
+    color: var(--button-manager-secondary-color);
+}
+
+.input-button[value="Sell"]:hover,
+.input-button[value="Buy"]:hover {
+    background-color: var(--button-manager-secondary-color);
+    color: var(--button-manager-main-color);
+}
+
+.input-button[data-action="apply"] {
+    background-color: var(--button-apply-main-color);
+    color: var(--button-apply-secondary-color);
+}
+
+.input-button[data-action="apply"]:hover {
+    background-color: var(--button-apply-secondary-color);
+    color: var(--button-apply-main-color);
+}
+
+.switcher {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#crud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#crud > h1 {
+    text-align: center;
+}
+
+#crud-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#crudForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
